@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{page_title}}</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="static/custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <style>
+        @font-face {
+    font-family: "Gilroy Light";
+    src: url("static/fonts/Gilroy-Light.otf");
+}
+
+@font-face {
+    font-family: "Gilroy ExtraBold";
+    src: url("static/fonts/Gilroy-ExtraBold.otf");
+}
+
+@font-face {
+    font-family: "Helvetica light";
+    src: local('Helvetica light'),
+    url("static/fonts/helvetica_light.otf");
+}
+
+@font-face {
+    font-family: "Helvetica bold" ;
+    src: local('Helvetica bold'),
+    url("static/fonts/helvetica_bold.otf");
+}
+
+@font-face {
+    font-family: "SOUTH-CREW";
+    src: url("static/fonts/SOUTH-CREW.ttf");
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+.header_logo{
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    left: 40px;
+    top: 15px;
+
+}
+.header_brands{
+    position: absolute;
+    width: 109px;
+    height: 35px;
+    left: 400px;
+    top: 60px;
+
+    color: #000000;
+    font-family: 'Gilroy', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    text-decoration: none;
+
+}
+
+.header_shoes{
+    position: absolute;
+    width: 86px;
+    height: 35px;
+    left: 559px;
+    top: 60px;
+
+    color: #000000;
+    font-family: 'Gilroy', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    text-decoration: none;
+}
+
+.header_personal-area{
+    position: absolute;
+    width: 310px;
+    height: 70px;
+    left: 1540px;
+    top: 42px;
+}
+
+.header_favorites{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 1660px;
+    top: 42px;
+}
+
+.header_shopping-card{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 1780px;
+    top: 42px;
+}
+
+.footer{
+    position: relative;
+    width: 1920px;
+    height: 220px;
+    left: 0px;
+    top: 1610px;
+    background: #EEF4ED;
+    margin-top: 0px;
+    }
+
+.footer_logo{
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    left: 323px;
+    top: 65px;
+
+}
+
+.footer_number{
+    position: absolute;
+    width: 288px;
+    height: 35px;
+    left: 670px;
+    top: 65px;
+
+
+    font-family: 'Gilroy', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer_email{
+    position: absolute;
+    width: 285px;
+    height: 35px;
+    left: 670px;
+    top: 125px;
+
+    font-family: 'Gilroy', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer_about-shop{
+    position: absolute;
+    width: 167px;
+    height: 35px;
+    left: 1055px;
+    top: 65px;
+
+    font-family: 'Gilroy', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer_contacts{
+    position: absolute;
+    width: 131px;
+    height: 35px;
+    left: 1055px;
+    top: 125px;
+
+    font-family: 'Gilroy', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer_info1{
+    position: absolute;
+    width: 275px;
+    height: 35px;
+    left: 1322px;
+    top: 65px;
+
+    font-family: 'Gilroy', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer_ifo2{
+    position: absolute;
+    width: 242px;
+    height: 35px;
+    left: 1322px;
+    top: 125px;
+
+    font-family: 'Gilroy', serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header_logo">
+            <a href="/" class="header_logo-link">
+                 <img src="static/img/logo.svg" class="header_logo" alt="Главная страница">
+            </a>
+        </div>
+        <div class="header_item">
+            <a href="/brands" class="header_brands">Бренды</a>
+        </div>
+        <div class="header_item">
+            <a href="/shoes" class="header_shoes">Обувь</a>
+        </div>
+        <div class="header_personal-area">
+            <a href="/personal-area" class="header_personal-area-link">
+                <img src="static/img/personal_area.png" class="header_personal-area-pic" alt="Личный кабинет"
+                         width="70" height="70">
+            </a>
+        </div>
+        <div class="header_favorites">
+            <a href="/favorites" class="header_favorites-link">
+                <img src="static/img/favorites.png" class="header_favorites-pic" alt="Избранное" width="70" height="70">
+            </a>
+        </div>
+        <div class="header_shopping-card">
+            <a href="/shopping-card" class="header_shopping-card-link">
+                <img src="static/img/shopping_card.png" class="header_shopping-card-pic" alt="Корзина" width="70"
+                         height="70">
+            </a>
+        </div>
+    </header>
+    {% block body %}
+    {% endblock %}
+    <div class="footer">
+        <div class="footer_logo">
+            <img src="static/img/logo.svg">
+        </div>
+        <div class="footer_number">
+            +0 (000) 000-00-00
+        </div>
+        <div class="footer_email">
+            example@email.com
+        </div>
+    <div class="footer_item">
+        <a href="/about-shop" class="footer_about-shop">О магазине</a>
+    </div>
+    <div class="footer_item">
+        <a href="/contacts" class="footer_contacts">Контакты</a>
+    </div>
+    <div class="footer_item">
+        <a href="/info1" class="footer_info1">Оплата и доставка</a>
+    </div>
+    <div class="footer_item">
+        <a href="/info1" class="footer_ifo2">Обмен и возврат</a>
+    </div>
+    </div>
+</body>
+</html>

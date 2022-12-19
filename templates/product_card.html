@@ -1,0 +1,248 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<style>
+.product_name{
+    position: absolute;
+width: 700px;
+height: 75px;
+left: 1150px;
+top: 241px;
+
+font-family: 'Helvetica bold';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 50px;
+
+color: #000000;
+}
+.product_articul{
+position: absolute;
+width: 332px;
+height: 35px;
+left: 1150px;
+top: 316px;
+
+font-family: 'Helvetica light';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 34px;
+/* identical to box height */
+
+color: #000000;
+}
+
+.choose_size{
+  position: absolute;
+width: 256px;
+height: 35px;
+left: 1150px;
+top: 393px;
+
+font-family: 'Gilroy';
+font-style: normal;
+font-weight: 300;
+font-size: 26px;
+line-height: 35px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+.carousel-inner{
+
+position: absolute;
+width: 435px;
+height: 650px;
+left: 473px;
+top: 230px;
+}
+
+.carousel-control-next{
+  position: absolute;
+width: 80px;
+height: 80px;
+left: 930px;
+top: 510px;
+}
+
+.carousel-control-prev{
+  position: absolute;
+width: 80px;
+height: 80px;
+left: 370px;
+top: 510px;
+}
+
+.mini-photo-1{
+  position: absolute;
+width: 100px;
+height: 100px;
+left: 150px;
+top: 340px;
+}
+
+.mini-photo-2{
+position: absolute;
+width: 100px;
+height: 100px;
+left: 150px;
+top: 450px;
+}
+
+.mini-photo-3{
+position: absolute;
+width: 100px;
+height: 100px;
+left: 150px;
+top: 560px;
+}
+
+.mini-photo-4{position: absolute;
+width: 100px;
+height: 100px;
+left: 150px;
+top: 670px;
+}
+
+.btn_favoriets{
+  position: absolute;
+width: 50px;
+height: 50px;
+left: 1450px;
+top: 592px;
+  background: none;
+        border: none;
+}
+
+.description{
+  position: absolute;
+left: 150px;
+top: 920px;
+
+font-family: 'Gilroy ExtraBold';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 50px;
+
+color: #000000;
+}
+
+.description-text{
+  position: absolute;
+left: 150px;
+top: 980px;
+  width: 1280px;
+
+font-family: 'Gilroy Light';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 39px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+.product_price {
+
+  position: absolute;
+width: 539px;
+height: 35px;
+left: 1150px;
+top: 351px;
+
+  font-family: 'Gilroy ExtraBold';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  /* identical to box height */
+
+
+  color: #000000;
+
+}
+
+</style>
+
+<div class="product_name">
+    {{title}}
+</div>
+<div class="product_articul">
+    Артикул: {{articul}}
+</div>
+<div class="product_price">
+    {{price}} руб
+</div>
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="false">
+      <img src="static/img/{{articul}}_1.jpg" class="d-block w-100" alt="photo_1">
+    </div>
+    <div class="carousel-item" data-bs-interval="false">
+      <img src="static/img/{{articul}}_2.jpg" class="d-block w-100" alt="photo_2">
+    </div>
+    <div class="carousel-item" data-bs-interval="false">
+      <img src="static/img/{{articul}}_3.jpg" class="d-block w-100" alt="photo_3">
+    </div>
+    <div class="carousel-item" data-bs-interval="false">
+      <img src="static/img/{{articul}}_4.jpg" class="d-block w-100" alt="photo_4">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="mini-photo-1">
+  <img src="static/img/{{articul}}_1.jpg" class="d-block w-100" alt="photo_">
+</div>
+<div class="mini-photo-2">
+  <img src="static/img/{{articul}}_2.jpg" class="d-block w-100" alt="photo_2">
+</div>
+<div class="mini-photo-3">
+  <img src="static/img/{{articul}}_3.jpg" class="d-block w-100" alt="photo_3">
+</div>
+<div class="mini-photo-4">
+  <img src="static/img/{{articul}}_4.jpg" class="d-block w-100" alt="photo_4">
+</div>
+<p class="choose_size">Выберите размер</p>
+<div class="size-bottoms">
+  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+    {% for size in sizes %}
+    {% if sizes.index(size) == 0 %}
+    <div class="form_radio_group-item">
+      <input type="radio" class="btn-check_{{size}}" name="btnradio" id="btnradio{{size}}" value="{{size}}" autocomplete="off" checked>
+      <label class="btn btn-outline-primary" for="btnradio{{size}}">{{size}}</label>
+    </div>
+    {% else %}
+    <div class="form_radio_group-item">
+        <input type="radio" class="btn-check{{size}}" name="btnradio" id="btnradio{{size}}" value="{{size}}" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btnradio{{size}}">{{size}}</label>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+</div>
+<div class="add-shopping-cart">
+  <button class="btn btn-primary btn-lg">Добавить в корзину</button>
+</div>
+
+<button class="btn_favoriets"><img src="static/img/add_favoriets.svg" onclick='this.src="static/img/like.svg" '></button>
+<p class="description">Описание товара</p>
+<p class="description-text">{{description}}</p>
+
+
+
+{% endblock %}

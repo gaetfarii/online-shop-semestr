@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<style>
+
+    .footer{
+        position: absolute;
+        width: 1920px;
+        height: 220px;
+        left: 0px;
+        top: 860px;
+    }
+
+    h1 {
+        position: absolute;
+        width: 439px;
+        height: 49px;
+        left: 740px;
+        top: 280px;
+
+        font-family: 'Gilroy ExtraBold';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 49px;
+        /* identical to box height */
+
+
+        color: #000000;
+
+    }
+
+    .login_name{
+        position: absolute;
+        width: 74px;
+        height: 35px;
+        left: 740px;
+        top: 400px;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        /* identical to box height */
+
+
+        color: #000000;
+
+    }
+
+    .login_password{
+        position: absolute;
+        width: 108px;
+        height: 35px;
+        left: 740px;
+        top: 475px;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        /* identical to box height */
+
+
+        color: #000000;
+
+    }
+
+    input[type=email], input[type=password] {
+        width: 300px;
+        height: 35px;
+        padding: 15px;
+        margin: -35px 0 0 200px;
+        display: flex;
+        justify-content: center;
+        border-style: solid;
+        border-width: 1px;
+        background: #EEF4ED;
+}
+
+    .btn_login {
+        position: absolute;
+        width: 250px;
+        height: 60px;
+        left: 826px;
+        top: 565px;
+        border: #FFFFFF;
+
+        background: #0000FF;
+
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        /* identical to box height */
+
+
+        color: #FFFFFF;
+
+    }
+
+    p {
+        position: absolute;
+        width: 395px;
+        height: 28px;
+        left: 753px;
+        top: 645px;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+        /* identical to box height */
+
+
+        color: #000000;
+
+    }
+
+    a {
+        color: #FF36AB;
+        text-decoration: none;
+    }
+
+</style>
+
+<h1>Вход в личный кабинет</h1>
+<form method="post">
+    <label class="login_name">Email
+        <input name="email" type="email" id = "email">
+    </label>
+    <label class="login_password">Пароль
+        <input name="password" type="password" id = "password">
+    </label>
+    <button class="btn_login">Войти</button>
+</form>
+
+<p>Нет аккаунта? <a href="/registration" class="reg_here">Создайте его здесь</a></p>
+
+{% endblock %}

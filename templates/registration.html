@@ -1,0 +1,282 @@
+{% extends "base.html" %}
+
+{% block body %}
+<style>
+
+    .footer{
+        position: absolute;
+        width: 1920px;
+        height: 220px;
+        left: 0px;
+        top: 860px;
+    }
+
+    h1{
+        position: absolute;
+        width: 244px;
+        height: 49px;
+        left: 840px;
+        top: 180px;
+
+        font-family: 'Gilroy ExtraBold';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 49px;
+
+        color: #000000;
+    }
+
+    .registration-form_name{
+        position: absolute;
+        width: 55px;
+        height: 35px;
+        left: 670px;
+        top: 295px;
+
+        font-family: 'Gilroy Light';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        /* identical to box height */
+
+
+        color: #000000;
+    }
+
+    .registration-form_surname{
+        position: absolute;
+        width: 129px;
+        height: 35px;
+        left: 670px;
+        top: 349px;
+
+        font-family: 'Gilroy Light';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        /* identical to box height */
+
+
+        color: #000000;
+
+    }
+
+    .registration-form_number {
+        position: absolute;
+        width: 242px;
+        height: 35px;
+        left: 670px;
+        top: 459px;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        /* identical to box height */
+
+
+        color: #000000;
+    }
+
+    .registration-form_email {
+        position: absolute;
+        width: 74px;
+        height: 35px;
+        left: 670px;
+        top: 514px;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        /* identical to box height */
+
+
+        color: #000000;
+    }
+
+    .registration-form_password{
+        position: absolute;
+        width: 108px;
+        height: 35px;
+        left: 670px;
+        top: 569px;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        /* identical to box height */
+
+
+        color: #000000;
+
+    }
+
+    .registration-form_repeat-password{
+        position: absolute;
+        width: 264px;
+        height: 35px;
+        left: 670px;
+        top: 624px;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        /* identical to box height */
+
+
+        color: #000000;
+
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+        width: 300px;
+        height: 35px;
+        padding: 15px;
+        margin: -35px 0 0 300px;
+        display: flex;
+        justify-content: center;
+        border-style: solid;
+        border-width: 1px;
+        background: #EEF4ED;
+}
+    p {
+        position: absolute;
+        width: 55px;
+        height: 35px;
+        left: 670px;
+        top: 404px;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        /* identical to box height */
+
+
+        color: #000000;
+    }
+
+    .genderChoice1_b {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 975px;
+    top: 410px;
+    }
+
+    .genderChoice1{
+        font-family: 'Gilroy Light';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 34px;
+        line-height: 35px;
+        position: absolute;
+        width: 33px;
+        height: 46px;
+        left: 1025px;
+        top: 410px;
+    }
+
+    .genderChoice2_b {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 1075px;
+        top: 410px;
+    }
+
+    .genderChoice2{
+        font-family: 'Gilroy Light';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 34px;
+        line-height: 35px;
+        position: absolute;
+        width: 33px;
+        height: 46px;
+        left: 1125px;
+        top: 410px;
+    }
+    .btn_registration{
+        position: absolute;
+        width: 350px;
+        height: 60px;
+        left: 785px;
+        top: 720px;
+
+
+        background: #0000FF;
+        border: #FFFFFF;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        /* identical to box height */
+
+
+        color: #FFFFFF;
+    }
+</style>
+
+<h1>Регистрация</h1>
+<form class="registration-form" method="post" autocomplete="off">
+    <label class="registration-form_name">Имя
+        <input type="text" name = "name" value="">
+    </label>
+    <label class="registration-form_surname">Фамилия
+        <input type="text" name = "surname" value="">
+    </label>
+    <label class="registration-form_number">Номер телефона
+        <input type="text" name = "number" value="">
+    </label>
+    <label class="registration-form_email">Email
+        <input type="email" name = "email" value="">
+    </label>
+    <label class="registration-form_password">Пароль
+        <input type="password" name = "password" value="">
+    </label>
+    <label class="registration-form_repeat-password">Повторите пароль
+        <input type="password" name = "repeat-password" value="">
+    </label>
+    <p>Пол</p>
+    <div>
+    <input type="radio" id="genderChoice1"
+     name="gender" value="male" class="genderChoice1_b">
+    <label for="genderChoice1" class="genderChoice1">М</label>
+
+    <input type="radio" id="genderChoice2"
+     name="gender" value="female" class="genderChoice2_b">
+    <label for="genderChoice2" class="genderChoice2">Ж</label>
+    </div>
+    <div class="form-group ">
+    {% with messages = get_flashed_messages()  %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    <input type="submit" class="btn_registration" value="Зарегистрироваться">
+    </div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block body %}
+<style>
+    .buy-now{
+    position: absolute;
+    width: 1920px;
+    height: 730px;
+    left: 0px;
+    top: 170px;
+
+}
+
+.brands_nike{
+    position: absolute;
+    width: 560px;
+    height: 580px;
+    left: 40px;
+    top: 970px;
+
+}
+
+.brands_adidas{
+    position: absolute;
+    width: 560px;
+    height: 580px;
+    left: 680px;
+    top: 970px;
+
+}
+
+.brands_converse{
+    position: absolute;
+    width: 560px;
+    height: 580px;
+    left: 1320px;
+    top: 970px;
+}
+</style>
+ <div class="buy-now">
+        <a href="/shoes" class="shoes-link">
+            <img src="static/img/buy-now.png" class="buy-now-pic" alt="Обувь" >
+        </a>
+    </div>
+    <div class="brands">
+        <div class="brands_nike">
+            <a href="/nike" class="brands_nike-link">
+                <img src="static/img/nike.png" class="brands_nike-pic" alt="Nike">
+            </a>
+        </div>
+        <div class="brands_adidas">
+            <a href="/adidas" class="brands_adidas-link">
+                <img src="static/img/adidas.png" class="brands_adidas-pic" alt="Adidas">
+            </a>
+        </div>
+        <div class="brands_converse">
+            <a href="/converse" class="brands_converce-link">
+                <img src="static/img/converse.png" class="brands_adidas-pic" alt="Converse">
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

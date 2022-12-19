@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+
+{% block body %}
+<style>
+    .footer{
+        position: absolute;
+        width: 1920px;
+        height: 220px;
+        left: 0px;
+        top: 860px;
+    }
+
+    .account-link{
+        position: absolute;
+        width: 220px;
+        height: 65px;
+        left: 70px;
+        top: 300px;
+
+        background: #0000FF;
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: #000000;    }
+    .account {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        position: absolute;
+        width: 126px;
+        height: 35px;
+        left: 30px;
+        top: 15px;
+        color: #FFFFFF;
+        text-decoration: none;
+
+        }
+
+    .orders-link {
+        position: absolute;
+        width: 220px;
+        height: 65px;
+        left: 70px;
+        top: 365px;
+
+        background: #FFFFFF;
+        border-width: 0px 1px 1px 1px;
+        border-style: solid;
+        border-color: #000000;
+    }
+
+    .orders {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        position: absolute;
+        width: 102px;
+        height: 35px;
+        left: 30px;
+        top: 15px;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .favorites-link {
+        position: absolute;
+        width: 220px;
+        height: 63px;
+        left: 70px;
+        top: 430px;
+
+        background: #FFFFFF;
+        border-width: 0px 1px 1px 1px;
+        border-style: solid;
+        border-color: #000000;
+    }
+
+    .favorites {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        position: absolute;
+        width: 102px;
+        height: 35px;
+        left: 30px;
+        top: 15px;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .acc {
+        position: absolute;
+        width: 168px;
+        height: 49px;
+        left: 520px;
+        top: 170px;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 49px;
+
+        color: #000000;
+    }
+
+    .name{
+        position: absolute;
+        width: 55px;
+        height: 35px;
+        left: 520px;
+        top: 290px;
+
+        font-family: 'Gilroy Light';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+
+        color: #000000;
+    }
+
+    .surname{
+        position: absolute;
+        width: 129px;
+        height: 35px;
+        left: 520px;
+        top: 350px;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+
+        color: #000000;
+
+    }
+
+    .number {
+        position: absolute;
+        width: 242px;
+        height: 35px;
+        left: 520px;
+        top: 410px;
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+
+        color: #000000;
+    }
+
+    .email {
+        position: absolute;
+    width: 74px;
+    height: 35px;
+    left: 520px;
+    top: 465px;
+
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+
+    color: #000000;
+
+    }
+
+    input[type=text], input[type=email] {
+        width: 300px;
+        height: 35px;
+        padding: 15px;
+        margin: -35px 0 0 300px;
+        display: flex;
+        justify-content: center;
+        border-style: solid;
+        border-width: 1px;
+        background: #EEF4ED;
+    }
+
+    .btn_save {
+        position: absolute;
+        width: 200px;
+        height: 60px;
+        left: 670px;
+        top: 570px;
+        border: none;
+
+        background: #0000FF;
+
+
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        /* identical to box height */
+
+
+        color: #FFFFFF;
+
+    }
+
+</style>
+<div class="account-link">
+    <a href="/personal-area" class="account">Аккаунт</a>
+</div>
+<div class="orders-link">
+    <a href="/orders" class="orders">Заказы</a>
+</div>
+<div class="favorites-link">
+    <a href="/favorites" class="favorites">Избранное</a>
+</div>
+<p class="acc">Профиль</p>
+<form>
+    <form class="change-account-info" method="post" autocomplete="off">
+    <label class="name">Имя
+        <input type="text" name = "name" value="">
+    </label>
+    <label class="surname">Фамилия
+        <input type="text" name = "surname" value="">
+    </label>
+    <label class="number">Номер телефона
+        <input type="text" name="number" value="">
+    </label>
+    <label class="email">Email
+        <input type="email" name="email" value="">
+    </label>
+    <input type="submit" class="btn_save" value="Сохранить">
+</form>
+{% endblock %}

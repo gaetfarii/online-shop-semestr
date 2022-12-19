@@ -1,0 +1,239 @@
+{% extends "base.html" %}
+
+{% block body %}
+<style>
+    .footer{
+        position: absolute;
+        width: 1920px;
+        height: 220px;
+        left: 0px;
+        top: 920px;
+    }
+
+    .account-link{
+        position: absolute;
+        width: 220px;
+        height: 65px;
+        left: 70px;
+        top: 300px;
+
+        background: #FFFFFF;
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: #000000;    }
+    .account {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        position: absolute;
+        width: 126px;
+        height: 35px;
+        left: 30px;
+        top: 15px;
+        color: #000000;
+        text-decoration: none;
+
+        }
+
+    .orders-link {
+        position: absolute;
+        width: 220px;
+        height: 65px;
+        left: 70px;
+        top: 365px;
+
+        background: #FFFFFF;
+        border-width: 0px 1px 1px 1px;
+        border-style: solid;
+        border-color: #000000;
+    }
+
+    .orders {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        position: absolute;
+        width: 102px;
+        height: 35px;
+        left: 30px;
+        top: 15px;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .favorites-link {
+        position: absolute;
+        width: 220px;
+        height: 63px;
+        left: 70px;
+        top: 430px;
+
+        background: #0000FF;
+        border-width: 0px 1px 1px 1px;
+        border-style: solid;
+        border-color: #000000;
+    }
+
+    .favorites {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        position: absolute;
+        width: 102px;
+        height: 35px;
+        left: 30px;
+        top: 15px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    .favorites-list{
+        position: absolute;
+width: 211px;
+height: 49px;
+left: 420px;
+top: 170px;
+
+font-family: 'Gilroy';
+font-style: normal;
+font-weight: 800;
+font-size: 40px;
+line-height: 49px;
+/* identical to box height */
+
+
+color: #000000;
+    }
+
+    .add-shopping-cart-fav {
+        box-sizing: border-box;
+
+position: absolute;
+width: 200px;
+height: 50px;
+left: 400px;
+top: 755px;
+background: #0000FF;
+border-width: 1px 0px 1px 1px;
+border-style: solid;
+border-color: #000000;
+
+        font-family: 'Gilroy';
+font-style: normal;
+font-weight: 300;
+font-size: 30px;
+line-height: 35px;
+text-align: center;
+color: #FFFFFF;
+
+    }
+
+    .add-shopping-cart-fav-label {
+        position: absolute;
+width: 150px;
+height: 45px;
+left: 25px;
+top: 5px;
+
+font-family: 'Gilroy';
+font-style: normal;
+font-weight: 300;
+font-size: 30px;
+line-height: 35px;
+
+color: #FFFFFF;
+border: none;
+        background: none;
+    }
+
+    .del-fav {
+        position: absolute;
+width: 50px;
+height: 50px;
+left: 594px;
+top: 754px;
+        background: none;
+        border: none;
+    }
+
+    .photo {
+        position: absolute;
+width: 200px;
+height: 350px;
+left: 400px;
+top: 301px;
+    }
+
+    .pr-photo{
+        width: 350px;
+        height: 350px;
+    }
+
+    .price {
+        position: absolute;
+width: 123px;
+height: 33px;
+left: 400px;
+top: 705px;
+
+font-family: 'Helvetica bold';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 33px;
+
+color: #000000;
+
+
+    }
+
+    .pr-title{
+       position: absolute;
+width: 350px;
+height: 28px;
+left: 400px;
+top: 661px;
+
+font-family: 'Helvetica light';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+/* identical to box height */
+
+
+color: #000000;
+
+    }
+</style>
+<div class="account-link">
+    <a href="/personal-area" class="account">Аккаунт</a>
+</div>
+<div class="orders-link">
+    <a href="/orders" class="orders">Заказы</a>
+</div>
+<div class="favorites-link">
+    <a href="/favorites" class="favorites">Избранное</a>
+</div>
+<p class="favorites-list">
+Избранное
+</p>
+<div class="all-favorites">
+    <p class="pr-title">Кроссовки Nike ACG Air Mowabb</p>
+    <p class="price">17810 руб</p>
+    <div class="photo">
+    <img class="pr-photo" src="static/img/123336_1.jpg" alt="product">
+    </div>
+    <button class="add-shopping-cart-fav">В корзину
+    </button>
+    <button class="del-fav">
+        <img src="static/img/del.svg">
+    </button>
+</div>
+{% endblock %}
